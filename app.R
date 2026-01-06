@@ -31,18 +31,30 @@ ui <- page_fluid(
 
 server <- function(input, output) {
   
-  output$question = renderText("")
-  output$solution = renderText("")
+  qa <- reactiveVal(c("", "")) 
+  
+  sol <- reactiveVal(c("", ""))
+  
+  output$question = renderText(qa()[1])
+  output$solution = renderText(qa()[2])
+  questions <- list(
+    c("வணக்கம்", "hello"),
+    c("மாடு", "cow")
+  )
   
   test <- "வணக்கம்"
   test_sol <- "hello" 
 
   observeEvent(input$question, {
-    output$question = renderText(paste("Translate:", test))
+    selection = sample(questions, 1)[[1]]
+    qa(c(selection[1], ""))
+    #solution=reactive(paste("Our solution: ", selection[2]))
+    #output$question = renderText(question())
+    sol(c(selection[1], selection[2]))
   })
   
   observeEvent(input$solution, {
-    output$solution = renderText(paste("Our Solution:", test_sol))
+    qa(sol())
   })
 }
 
