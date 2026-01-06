@@ -12,10 +12,18 @@ ui <- page_fluid(
   actionButton("question", "Question\nகேல்வி"),
   
   card(
-    "before maa",
+    #"before maa",
     textOutput("question"),
-    "after maa"
-    )
+    #"after maa"
+    ),
+  
+  actionButton("solution", "Solution"),
+  
+  card(
+    #"before maa",
+    textOutput("solution"),
+    #"after maa"
+  )
   
 
   
@@ -23,14 +31,19 @@ ui <- page_fluid(
 
 server <- function(input, output) {
   
-  output$question = renderText("Translate:")
+  output$question = renderText("")
+  output$solution = renderText("")
   
-  test <- "மா"
+  test <- "வணக்கம்"
+  test_sol <- "hello" 
 
   observeEvent(input$question, {
     output$question = renderText(paste("Translate:", test))
   })
   
+  observeEvent(input$solution, {
+    output$solution = renderText(paste("Our Solution:", test_sol))
+  })
 }
 
 shinyApp(ui = ui, server = server)
