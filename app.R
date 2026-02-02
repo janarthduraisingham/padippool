@@ -17,7 +17,12 @@ ui <- page_fluid(
     #"after maa"
     ),
   
-  actionButton("solution", "Solution"),
+  card(
+    card_header("Your solution"),
+    textInput("user_solution", "Enter solution", "")
+  ),
+  
+  actionButton("solution", "Our Solution"),
   
   card(
     #"before maa",
