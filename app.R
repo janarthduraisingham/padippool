@@ -27,6 +27,8 @@ ui <- page_fluid(
   card(
     #"before maa",
     textOutput("solution"),
+    textOutput("user_sol"),
+    textOutput("check")
     #"after maa"
   )
   
@@ -37,20 +39,24 @@ ui <- page_fluid(
 server <- function(input, output) {
   
   qa <- reactiveVal(c("", "")) 
-  
   sol <- reactiveVal(c("", ""))
+  check <- reactiveVal("")
   
+  output$check = renderText(check())
+  output$user_sol<- renderText(input$user_solution)
   output$question = renderText(qa()[1])
   output$solution = renderText(qa()[2])
   questions <- list(
-    c("வணக்கம்", "hello"),
-    c("மாடு", "cow")
+    c("hello","வணக்கம்"), 
+    c("cow", "மாடு"),
+    c("hi", "bye")
   )
   
   test <- "வணக்கம்"
   test_sol <- "hello" 
 
   observeEvent(input$question, {
+    check("")
     selection = sample(questions, 1)[[1]]
     qa(c(selection[1], ""))
     #solution=reactive(paste("Our solution: ", selection[2]))
@@ -60,6 +66,9 @@ server <- function(input, output) {
   
   observeEvent(input$solution, {
     qa(sol())
+    
+    if (sol()[2] == input$user_solution) {check("same!")} else { check("different...")}
+    
   })
 }
 
