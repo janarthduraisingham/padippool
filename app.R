@@ -48,8 +48,7 @@ server <- function(input, output) {
   output$solution = renderText(qa()[2])
   questions <- list(
     c("hello","வணக்கம்"), 
-    c("cow", "மாடு"),
-    c("hi", "bye")
+    c("cow", "மாடு")
   )
   
   test <- "வணக்கம்"
