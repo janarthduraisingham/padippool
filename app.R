@@ -48,8 +48,22 @@ server <- function(input, output) {
   output$solution = renderText(qa()[2])
   questions <- list(
     c("hello","வணக்கம்"), 
-    c("cow", "மாடு")
-  )
+    c("cow", "மாடு"),
+    c("picture; movie", "படம்"),
+    c("tooth", "பல்"),
+    c("stone", "கல்"),
+    c("soil; dirt", "மண்"),
+    c("sand", "மணல்"),
+    c("son", "மகன்"),
+    c("daughter", "மகள்"),
+    c("tree", "மரம்"),
+    c("sea", "கடல்"),
+    c("debt; obligation", "கடன்"),
+    c("fruit", "பழம்"),
+    c("page; side", "பக்கம்"),
+    c("fingernail; toenail", "நகம்"),
+    c("mind; willingness", "மனம்"),
+    c("smell; scent; wedding", "மணம்"))
   
   test <- "வணக்கம்"
   test_sol <- "hello" 
