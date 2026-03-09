@@ -46,7 +46,7 @@ server <- function(input, output) {
   output$user_sol<- renderText(input$user_solution)
   output$question = renderText(qa()[1])
   output$solution = renderText(qa()[2])
-  questions <- list(
+  nouns <- list(
     c("hello","வணக்கம்"), 
     c("cow", "மாடு"),
     c("picture; movie", "படம்"),
@@ -64,6 +64,11 @@ server <- function(input, output) {
     c("fingernail; toenail", "நகம்"),
     c("mind; willingness", "மனம்"),
     c("smell; scent; wedding", "மணம்"))
+  
+  verbs = list()
+  
+  questions = c(nouns,
+                verbs)
   
   test <- "வணக்கம்"
   test_sol <- "hello" 
