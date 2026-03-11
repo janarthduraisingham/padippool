@@ -214,7 +214,7 @@ server <- function(input, output) {
     qa(c(selection[1], ""))
     #solution=reactive(paste("Our solution: ", selection[2]))
     #output$question = renderText(question())
-    sol(c(selection[1], selection[2]))
+    sol(c(selection[1], paste(selection[2], "is our solution")))
   })
   
   observeEvent(input$solution, {
