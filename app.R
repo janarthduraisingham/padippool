@@ -220,7 +220,7 @@ server <- function(input, output) {
   observeEvent(input$solution, {
     qa(sol())
     
-    if (sol()[2] == input$user_solution) {check("Yours is the same!")} else { check("Yours is different")}
+    if (sol()[2] == paste(input$user_solution, "is our solution")) {check("Yours is the same!")} else { check("Yours is different")}
     
   })
 }
