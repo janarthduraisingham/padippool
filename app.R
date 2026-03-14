@@ -38,6 +38,9 @@ ui <- page_fluid(
 
 server <- function(input, output) {
   
+  source("R/verbs.R")
+  source("R/nouns.R")
+  
   qa <- reactiveVal(c("", "")) 
   sol <- reactiveVal(c("", ""))
   check <- reactiveVal("")
