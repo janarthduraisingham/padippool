@@ -38,6 +38,8 @@ ui <- page_fluid(
 
 server <- function(input, output) {
   
+  set.seed(as.numeric(Sys.time()))
+  
   source("R/verbs.R")
   source("R/nouns.R")
   
