@@ -8,10 +8,11 @@ ui <- page_fluid(
     "What will you dive into today?"
   ),
   
-  actionButton("question", "Question\nகேல்வி"),
   
   card(
     textOutput("question"),
+    actionButton("question", "Question\nகேல்வி")
+    
     ),
   
   card(
@@ -19,12 +20,13 @@ ui <- page_fluid(
     textInput("user_solution", "Enter solution", "")
   ),
   
-  actionButton("solution", "Our Solution"),
   
   card(
     textOutput("solution"),
     textOutput("user_sol"),
-    textOutput("check")
+    textOutput("check"),
+    actionButton("solution", "Our Solution"),
+    
   )
   
 
