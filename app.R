@@ -1,4 +1,3 @@
-#options(shiny.launch.browser = TRUE)
 library(shiny)
 library(bslib)
 
@@ -12,9 +11,7 @@ ui <- page_fluid(
   actionButton("question", "Question\nகேல்வி"),
   
   card(
-    #"before maa",
     textOutput("question"),
-    #"after maa"
     ),
   
   card(
@@ -25,11 +22,9 @@ ui <- page_fluid(
   actionButton("solution", "Our Solution"),
   
   card(
-    #"before maa",
     textOutput("solution"),
     textOutput("user_sol"),
     textOutput("check")
-    #"after maa"
   )
   
 
@@ -54,26 +49,20 @@ server <- function(input, output) {
   
   questions = c(nouns,
                 verbs)
-  
-  test <- "வணக்கம்"
-  test_sol <- "hello" 
 
   observeEvent(input$question, {
     check("")
     selection = sample(questions, 1)[[1]]
     qa(c(selection[1], ""))
-    #solution=reactive(paste("Our solution: ", selection[2]))
-    #output$question = renderText(question())
-    sol(c(selection[1], paste(selection[2], "is our solution")))
+    sol(c(selection[1], paste(selection[2], "is one possible solution")))
   })
   
   observeEvent(input$solution, {
     qa(sol())
     
-    if (sol()[2] == paste(input$user_solution, "is our solution")) {check("Yours is the same!")} else { check("Yours is different")}
+    if (sol()[2] == paste(input$user_solution, "is one possible solution")) {check("Yours is the same!")} else { check("Yours is different")}
     
   })
 }
 
 shinyApp(ui = ui, server = server)
-
