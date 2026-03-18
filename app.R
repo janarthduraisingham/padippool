@@ -5,7 +5,7 @@ ui <- page_fluid(
   titlePanel("Welcome to படிப்pool"),
   card(
     card_header("Options"),
-    "Choose question type"
+    "What will you dive into today?"
   ),
   
   actionButton("question", "Question\nகேல்வி"),
