@@ -130,6 +130,11 @@ server <- function(input, output) {
       rv$correct = rv$correct + 1
       rv$current_streak = rv$current_streak + 1
       
+      # Update longest streak
+      if (rv$current_streak > rv$longest_streak) {
+        rv$longest_streak = rv$current_streak
+      }
+      
     }
     
   })
