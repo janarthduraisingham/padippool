@@ -56,8 +56,17 @@ server <- function(input, output) {
     # First, clear solution printout and check print out
     rv$solution_message = ""
     rv$check_message = ""
-    questions = c(nouns,
-                  verbs)
+    
+    #questions = c(nouns,
+     #             verbs)
+    #
+    questions = c()
+    
+    for (selection in input$question_types) {
+      
+      questions = c(questions, get(selection))
+      
+    }
     
     # Randomyl draw question-answer pair
     selection = sample(questions, 1)[[1]]
