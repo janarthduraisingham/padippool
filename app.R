@@ -57,9 +57,7 @@ server <- function(input, output) {
     rv$solution_message = ""
     rv$check_message = ""
     
-    #questions = c(nouns,
-     #             verbs)
-    #
+    # Select question based on user-selected question type(s)
     questions = c()
     
     for (selection in input$question_types) {
