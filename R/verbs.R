@@ -4,6 +4,7 @@ verbs <- list(
   c("go", "போ"),
   c("walk; happen", "நட"),
   c("run", "ஓடு"),
+  c("rock; dance", "ஆடு"),
   c("sit; stay; be", "இரு"),
   c("give (to someone)", "தொடு"),
   c("buy", "வாங்கு"),

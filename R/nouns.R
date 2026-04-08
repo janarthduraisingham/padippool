@@ -36,7 +36,7 @@ nouns <- list(
   c("student (female)", "மாணவி"),
   c("teacher", "ஆசிரியர்"),
   c("back (spine)", "முதுகு"),
-  c("goat; to rock; to dance", "ஆடு"),
+  c("goat", "ஆடு"),
   c("thread; book", "நூல்"),
   c("crowd", "கூட்டம்"),
   c("book", "புத்தகம்"),
