@@ -61,6 +61,8 @@ nouns <- list(
   c("shell", "ஓடு"),
   c("bracelet", "வளையல்"),
   c("bend", "வளைவு"),
+  c("step", "படி"),
+  c("bottom", "அடி"),
   c("baby; child", "குழந்தை"),
   c("drawn line", "கோடு"),
   c("written line; tax", "வரி"),
