@@ -11,12 +11,14 @@ ui <- page_fluid(
       choices = c(
         "Nouns" = "nouns",
         "Infinitive verbs" = "verbs",
-        "Numbers" = "numbers"
+        "Numbers" = "numbers",
+        "Prepositions" = "prepositions"
       ),
       selected = c(
         "Nouns" = "nouns",
         "Infinitive verbs" = "verbs",
-        "Numbers" = "numbers"
+        "Numbers" = "numbers",
+        "Prepositions" = "prepositions"
       )
     )
   ),
