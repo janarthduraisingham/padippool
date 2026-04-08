@@ -40,6 +40,8 @@ server <- function(input, output) {
   source("R/verbs.R")
   source("R/nouns.R")
   
+  rv <- reactiveValues()
+  
   qa <- reactiveVal(c("", "")) 
   sol <- reactiveVal(c("", ""))
   check <- reactiveVal("")
