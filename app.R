@@ -66,7 +66,7 @@ server <- function(input, output) {
       
     }
     
-    # Randomyl draw question-answer pair
+    # Randomly draw question-answer pair
     selection = sample(questions, 1)[[1]]
     rv$question = selection[1]
     rv$solution = selection[2]
