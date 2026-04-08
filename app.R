@@ -4,17 +4,23 @@ library(bslib)
 ui <- page_fluid(
   titlePanel("Welcome to படிப்pool"),
   card(
-    card_header("Options"),
+    card_header("What will you dive into today?"),
     checkboxGroupInput(
       inputId = "question_types",
-      label = "What will you dive into today?",
+      label = "",
       choices = c(
         "Nouns" = "nouns",
-        "Infinitive verbs" = "verbs"
+        "Infinitive verbs" = "verbs",
+        "Numbers" = "numbers",
+        "Prepositions" = "prepositions",
+        "Interrogatives & demonstratives" = "interrogatives_demonstratives"
       ),
       selected = c(
         "Nouns" = "nouns",
-        "Infinitive verbs" = "verbs"
+        "Infinitive verbs" = "verbs",
+        "Numbers" = "numbers",
+        "Prepositions" = "prepositions",
+        "Interrogatives & demonstratives" = "interrogatives_demonstratives"
       )
     )
   ),
