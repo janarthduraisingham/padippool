@@ -10,11 +10,13 @@ ui <- page_fluid(
       label = "What will you dive into today?",
       choices = c(
         "Nouns" = "nouns",
-        "Infinitive verbs" = "verbs"
+        "Infinitive verbs" = "verbs",
+        "Numbers" = "numbers"
       ),
       selected = c(
         "Nouns" = "nouns",
-        "Infinitive verbs" = "verbs"
+        "Infinitive verbs" = "verbs",
+        "Numbers" = "numbers"
       )
     )
   ),
