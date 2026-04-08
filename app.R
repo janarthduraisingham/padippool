@@ -5,7 +5,6 @@ ui <- page_fluid(
   titlePanel("Welcome to படிப்pool"),
   card(
     card_header("Options"),
-    #"What will you dive into today?",
     checkboxGroupInput(
       inputId = "question_types",
       label = "What will you dive into today?",
