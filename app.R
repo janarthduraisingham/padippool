@@ -21,6 +21,15 @@ ui <- page_fluid(
   ),
   
   card(
+    card_header("Score"),
+    textOutput("questions_attempted"),
+    textOutput("correct_solutions"),
+    textOutput("hit_rate"),
+    textOutput("current_streak"),
+    textOutput("longest_streak")
+  ),
+  
+  card(
     textOutput("question"),
     actionButton("question", "Question\nகேல்வி")
     ),
@@ -47,12 +56,25 @@ server <- function(input, output) {
   rv <- reactiveValues(question = "",
                        solution = "",
                        solution_message = "",
-                       check_message = "")
+                       check_message = "",
+                       questions = 0,
+                       correct = 0,
+                       current_streak = 0,
+                       longest_streak = 0)
   
   output$check_message = renderText(rv$check_message)
   output$user_sol<- renderText(input$user_solution)
   output$question = renderText(rv$question)
   output$solution = renderText(rv$solution_message)
+  
+  output$questions_attempted = renderText(paste0("Questions: ", as.character(rv$questions)))
+  output$correct_solutions = renderText(paste0("Correct: ", as.character(rv$correct)))
+  output$hit_rate = renderText(paste0("Hit rate: ", as.character(rv$correct / rv$questions)))
+  output$current_streak = renderText(paste0("Current streak: ", as.character(rv$current_streak)))
+  output$longest_streak = renderText(paste0("Longest streak: ", as.character(rv$longest_streak)))
+  
+  # current streak
+  # longest streaj
 
   # On button press, randomly select and print question-solution pair
   observeEvent(input$question, {
