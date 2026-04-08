@@ -5,7 +5,15 @@ ui <- page_fluid(
   titlePanel("Welcome to படிப்pool"),
   card(
     card_header("Options"),
-    "What will you dive into today?"
+    #"What will you dive into today?",
+    checkboxGroupInput(
+      "question_types",
+      "What will you dive into today?",
+      c(
+        "Nouns" = "nouns",
+        "Infinitive verbs" = "verbs"
+      )
+    )
   ),
   
   card(
