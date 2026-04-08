@@ -48,7 +48,8 @@ server <- function(input, output) {
   sol <- reactiveVal(c("", ""))
   check <- reactiveVal("")
   
-  output$check = renderText(check())
+  #output$check = renderText(check())
+  output$check = renderText(rv$check)
   output$user_sol<- renderText(input$user_solution)
   output$question = renderText(qa()[1])
   output$solution = renderText(qa()[2])
@@ -57,7 +58,8 @@ server <- function(input, output) {
                 verbs)
 
   observeEvent(input$question, {
-    check("")
+    #check("")
+    rv$check = ""
     selection = sample(questions, 1)[[1]]
     qa(c(selection[1], ""))
     sol(c(selection[1], paste(selection[2], "is one possible solution")))
@@ -66,7 +68,9 @@ server <- function(input, output) {
   observeEvent(input$solution, {
     qa(sol())
     
-    if (sol()[2] == paste(input$user_solution, "is one possible solution")) {check("Yours is the same!")} else { check("Yours is different")}
+    #if (sol()[2] == paste(input$user_solution, "is one possible solution")) {check("Yours is the same!")} else { check("Yours is different")}
+    if (sol()[2] == paste(input$user_solution, "is one possible solution")) {rv$check = "Yours is the same!"} else {rv$check = "Yours is different"}
+    
     
   })
 }
