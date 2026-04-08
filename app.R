@@ -86,6 +86,9 @@ server <- function(input, output) {
     rv$solution_message = ""
     rv$check_message = ""
     
+    # Incremement questions asked tracker
+    rv$questions = rv$questions + 1
+    
     # Select question based on user-selected question type(s)
     questions = c()
     
