@@ -89,6 +89,11 @@ server <- function(input, output) {
     # Incremement questions asked tracker
     rv$questions = rv$questions + 1
     
+    # Reset current streak if new question requested before solution
+    if (rv$solution_requested == 0){
+      rv$current_streak = 0
+    }
+    
     # Set solution requested flag to 0
     rv$solution_requested = 0
     
