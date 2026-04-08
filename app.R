@@ -120,6 +120,15 @@ server <- function(input, output) {
         rv$check_message = "Yours is different"
     }
     
+    # Increment correct solutions tracker if this is first button press for question
+    
+    if (rv$solution_requested == 0 & rv$solution == input$user_solution) {
+      
+      rv$solution_requested = 1
+      
+      rv$correct = rv$correct + 1
+      
+    }
     
   })
 
