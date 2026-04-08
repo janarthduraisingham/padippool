@@ -118,6 +118,7 @@ server <- function(input, output) {
       rv$check_message = "Yours is the same!"
     } else {
         rv$check_message = "Yours is different"
+        rv$current_streak = 0
     }
     
     # Increment correct solutions tracker if this is first button press for question
@@ -127,6 +128,7 @@ server <- function(input, output) {
       rv$solution_requested = 1
       
       rv$correct = rv$correct + 1
+      rv$current_streak = rv$current_streak + 1
       
     }
     
