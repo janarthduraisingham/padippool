@@ -53,6 +53,9 @@ server <- function(input, output) {
   # On button press, randomly select and print question-solution pair
   observeEvent(input$question, {
     
+    # Require at least one checkbox ticked
+    req(length(input$question_types) >= 1)
+    
     # First, clear solution printout and check print out
     rv$solution_message = ""
     rv$check_message = ""
@@ -74,6 +77,9 @@ server <- function(input, output) {
   
   # On button press, check user input against solution and print message accordingly
   observeEvent(input$solution, {
+    # Require at least one checkbox ticked
+    req(length(input$question_types) >= 1)
+    
     rv$solution_message = paste(rv$solution, "is one possible solution")
     
     if (rv$solution == input$user_solution) {rv$check_message = "Yours is the same!"} else {rv$check_message = "Yours is different"}
