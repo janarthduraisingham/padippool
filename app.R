@@ -40,7 +40,8 @@ server <- function(input, output) {
   source("R/verbs.R")
   source("R/nouns.R")
   
-  rv <- reactiveValues(question_answer = c("", ""))
+  rv <- reactiveValues(question_answer = c("", ""),
+                       solution = c("", ""))
   
   qa <- reactiveVal(c("", "")) 
   sol <- reactiveVal(c("", ""))
