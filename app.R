@@ -59,7 +59,8 @@ server <- function(input, output) {
                        questions = 0,
                        correct = 0,
                        current_streak = 0,
-                       longest_streak = 0)
+                       longest_streak = 0,
+                       solution_requested = 0)
   
   output$check_message = renderText(rv$check_message)
   output$user_sol<- renderText(input$user_solution)
@@ -88,6 +89,9 @@ server <- function(input, output) {
     # Incremement questions asked tracker
     rv$questions = rv$questions + 1
     
+    # Set solution requested flag to 0
+    rv$solution_requested = 0
+    
     # Select question based on user-selected question type(s)
     questions = c()
     
@@ -110,8 +114,15 @@ server <- function(input, output) {
     
     rv$solution_message = paste(rv$solution, "is one possible solution")
     
-    if (rv$solution == input$user_solution) {rv$check_message = "Yours is the same!"} else {rv$check_message = "Yours is different"}
+    if (rv$solution == input$user_solution) {
+      rv$check_message = "Yours is the same!"
+    } else {
+        rv$check_message = "Yours is different"
+    }
+    
+    
   })
+
 }
 
 shinyApp(ui = ui, server = server)
