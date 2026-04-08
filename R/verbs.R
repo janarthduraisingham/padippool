@@ -24,6 +24,7 @@ verbs <- list(
   c("cut", "வெட்டு"),
   c("bathe (a baby)", "குளிப்பாடு"),
   c("play", "விளையாடு"),
+  c("bend", "வளைவு"),
   c("bathe", "குளி"),
   c("bite", "கடி"),
   c("squeeze", "பிழி"),
