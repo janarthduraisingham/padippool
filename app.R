@@ -32,8 +32,8 @@ server <- function(input, output) {
   source("R/verbs.R")
   source("R/nouns.R")
   
-  rv <- reactiveValues(question_answer = c("", ""),
-                       solution = c("", ""),
+  rv <- reactiveValues(question = "",
+                       solution = "",
                        solution_message = "",
                        check_message = "")
   
