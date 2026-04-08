@@ -51,7 +51,8 @@ server <- function(input, output) {
   
   output$check_message = renderText(rv$check_message)
   output$user_sol<- renderText(input$user_solution)
-  output$question = renderText(qa()[1])
+  #output$question = renderText(qa()[1])
+  output$question = renderText(rv$question)
   output$solution = renderText(rv$solution_message)
   
   
