@@ -53,10 +53,13 @@ server <- function(input, output) {
   output$question = renderText(qa()[1])
   output$solution = renderText(qa()[2])
   
-  questions = c(nouns,
-                verbs)
+  
 
   observeEvent(input$question, {
+    
+    questions = c(nouns,
+                  verbs)
+    
     selection = sample(questions, 1)[[1]]
     qa(c(selection[1], ""))
     sol(c(selection[1], paste(selection[2], "is one possible solution")))
