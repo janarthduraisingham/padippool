@@ -7,9 +7,13 @@ ui <- page_fluid(
     card_header("Options"),
     #"What will you dive into today?",
     checkboxGroupInput(
-      "question_types",
-      "What will you dive into today?",
-      c(
+      inputId = "question_types",
+      label = "What will you dive into today?",
+      choices = c(
+        "Nouns" = "nouns",
+        "Infinitive verbs" = "verbs"
+      ),
+      selected = c(
         "Nouns" = "nouns",
         "Infinitive verbs" = "verbs"
       )
