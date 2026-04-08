@@ -61,7 +61,9 @@ server <- function(input, output) {
                   verbs)
     
     selection = sample(questions, 1)[[1]]
-    qa(c(selection[1], ""))
+    rv$question = selection[1]
+    rv$solution = selection[2]
+    #qa(c(selection[1], ""))
     sol(c(selection[1], paste(selection[2], "is one possible solution")))
   })
   
