@@ -9,6 +9,6 @@ numbers <- list(
   c("eight", "எட்டு"),
   c("nine", "ஒன்பது"),
   c("ten", "பத்து"),
-  c("hundred", "நூறு"),
-  c("thousand", "ஆயிரம்")
+  c("one hundred", "நூறு"),
+  c("one thousand", "ஆயிரம்")
 )

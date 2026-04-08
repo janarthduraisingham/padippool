@@ -3,7 +3,7 @@ verbs <- list(
   c("give (me)", "தா"),
   c("go", "போ"),
   c("walk; happen", "நட"),
-  c("run; shell (n)", "ஓடு"),
+  c("run", "ஓடு"),
   c("sit; stay; be", "இரு"),
   c("give (to someone)", "தொடு"),
   c("buy", "வாங்கு"),
@@ -36,7 +36,7 @@ verbs <- list(
   c("hear; listen", "கேள்"),
   c("see; look", "பார்"),
   c("sit", "உட்கார்"),
-  c("wet (vb)", "நனை"),
+  c("wet", "நனை"),
   c("hide", "மறை"),
   c("kill", "கொல்")
 )

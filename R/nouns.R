@@ -58,6 +58,7 @@ nouns <- list(
   c("elephant", "யானை"),
   c("horse", "குதிரை"),
   c("leaf", "இலை"),
+  c("shell", "ஓடு"),
   c("bracelet", "வளையல்"),
   c("bend", "வளைவு"),
   c("baby; child", "குழந்தை"),
