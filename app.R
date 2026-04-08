@@ -45,9 +45,13 @@ server <- function(input, output) {
   # On button press, randomly select and print question-solution pair
   observeEvent(input$question, {
     
+    # First, clear solution printout and check print out
+    rv$solution_message = ""
+    rv$check_message = ""
     questions = c(nouns,
                   verbs)
     
+    # Randomyl draw question-answer pair
     selection = sample(questions, 1)[[1]]
     rv$question = selection[1]
     rv$solution = selection[2]
