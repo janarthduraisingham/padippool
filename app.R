@@ -69,7 +69,7 @@ server <- function(input, output) {
   
   output$questions_attempted = renderText(paste0("Questions: ", as.character(rv$questions)))
   output$correct_solutions = renderText(paste0("Correct: ", as.character(rv$correct)))
-  output$hit_rate = renderText(paste0("Hit rate: ", as.character(rv$correct / rv$questions)))
+  output$hit_rate = renderText(paste0("Hit rate: ", as.character(round(rv$correct / rv$questions, 2)), "%"))
   output$current_streak = renderText(paste0("Current streak: ", as.character(rv$current_streak)))
   output$longest_streak = renderText(paste0("Longest streak: ", as.character(rv$longest_streak)))
   
