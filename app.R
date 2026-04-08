@@ -125,8 +125,6 @@ server <- function(input, output) {
     
     if (rv$solution_requested == 0 & rv$solution == input$user_solution) {
       
-      rv$solution_requested = 1
-      
       rv$correct = rv$correct + 1
       rv$current_streak = rv$current_streak + 1
       
@@ -136,6 +134,8 @@ server <- function(input, output) {
       }
       
     }
+    
+    rv$solution_requested = 1
     
   })
 
