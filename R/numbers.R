@@ -10,5 +10,5 @@ numbers <- list(
   c("nine", "ஒன்பது"),
   c("ten", "பத்து"),
   c("hundred", "நூறு"),
-  c("thousand", "ஆயிரம்"),
+  c("thousand", "ஆயிரம்")
 )
