@@ -68,6 +68,7 @@ server <- function(input, output) {
                        longest_streak = 0,
                        solution_requested = 0)
   
+  # Output to ui
   output$check_message = renderText(rv$check_message)
   output$user_sol<- renderText(input$user_solution)
   output$question = renderText(rv$question)
@@ -75,12 +76,18 @@ server <- function(input, output) {
   
   output$questions_attempted = renderText(paste0("Questions: ", as.character(rv$questions)))
   output$correct_solutions = renderText(paste0("Correct: ", as.character(rv$correct)))
-  output$hit_rate = renderText(paste0("Hit rate: ", as.character(round(100 * rv$correct / rv$questions, 2)), "%"))
+  
+  # Deal with NaN hit rate
+  output$hit_rate = renderText({
+    if (rv$questions == 0) {
+      paste0("Hit rate: -")
+    } else {
+      paste0("Hit rate: ", as.character(round(100 * rv$correct / rv$questions, 2)), "%")
+    }
+  })
+  
   output$current_streak = renderText(paste0("Current streak: ", as.character(rv$current_streak)))
   output$longest_streak = renderText(paste0("Longest streak: ", as.character(rv$longest_streak)))
-  
-  # current streak
-  # longest streaj
 
   # On button press, randomly select and print question-solution pair
   observeEvent(input$question, {
@@ -146,6 +153,7 @@ server <- function(input, output) {
       
     }
     
+    # Update flag
     rv$solution_requested = 1
     
   })
