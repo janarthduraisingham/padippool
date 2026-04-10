@@ -1,6 +1,10 @@
 library(shiny)
 library(bslib)
 
+# Options
+options(shiny.fullstacktrace = TRUE)
+options(shiny.error = browser)
+
 ui <- page_fluid(
   titlePanel("Welcome to படிப்pool"),
   card(
