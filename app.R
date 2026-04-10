@@ -145,7 +145,7 @@ server <- function(input, output) {
     
     # Increment correct solutions tracker if this is first button press for question
     
-    if (rv$solution_requested == 0 & rv$solution == input$user_solution) {
+    if (rv$solution_requested == 0 & isTRUE(rv$solution == input$user_solution)) {
       
       rv$correct = rv$correct + 1
       rv$current_streak = rv$current_streak + 1
