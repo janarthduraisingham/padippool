@@ -45,5 +45,8 @@ imperative_verbs_informal <- list(
   c("hide", "மறை"),
   c("kill", "கொல்")
 ) %>%
-  map(~ paste0(.x[1], " (informal)"))
-
+  # append informal to english definition
+  map(~ {
+    .x[1] = paste0(.x[1], " (informal)")
+    .x
+  })
