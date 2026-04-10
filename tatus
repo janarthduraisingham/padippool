@@ -1,0 +1,35 @@
+[1mdiff --git a/R/imperative_verbs_informal.R b/R/imperative_verbs_informal.R[m
+[1mindex d12e56f..8a2e6b6 100644[m
+[1m--- a/R/imperative_verbs_informal.R[m
+[1m+++ b/R/imperative_verbs_informal.R[m
+[36m@@ -45,5 +45,9 @@[m [mimperative_verbs_informal <- list([m
+   c("hide", "மறை"),[m
+   c("kill", "கொல்")[m
+ ) %>%[m
+[31m-  map(~ paste0(.x[1], " (informal)"))[m
+[32m+[m[32m  # append informal to english definition[m
+[32m+[m[32m  map(~ {[m
+[32m+[m[32m    .x[1] = paste0(.x[1], " (informal)")[m
+[32m+[m[32m    .x[m
+[32m+[m[32m  })[m
+ [m
+[1mdiff --git a/app.R b/app.R[m
+[1mindex b767b67..d6e9ac1 100644[m
+[1m--- a/app.R[m
+[1m+++ b/app.R[m
+[36m@@ -95,7 +95,6 @@[m [mserver <- function(input, output) {[m
+ [m
+   # On button press, randomly select and print question-solution pair[m
+   observeEvent(input$question, {[m
+[31m-    [m
+     # Require at least one checkbox ticked[m
+     req(length(input$question_types) >= 1)[m
+     [m
+[36m@@ -131,6 +130,7 @@[m [mserver <- function(input, output) {[m
+   [m
+   # On button press, check user input against solution and print message accordingly[m
+   observeEvent(input$solution, {[m
+[32m+[m[41m    [m
+     # Require at least one checkbox ticked[m
+     req(length(input$question_types) >= 1)[m
+     [m

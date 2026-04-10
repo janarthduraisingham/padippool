@@ -95,7 +95,6 @@ server <- function(input, output) {
 
   # On button press, randomly select and print question-solution pair
   observeEvent(input$question, {
-    
     # Require at least one checkbox ticked
     req(length(input$question_types) >= 1)
     
@@ -131,6 +130,7 @@ server <- function(input, output) {
   
   # On button press, check user input against solution and print message accordingly
   observeEvent(input$solution, {
+    
     # Require at least one checkbox ticked
     req(length(input$question_types) >= 1)
     
