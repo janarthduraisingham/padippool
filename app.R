@@ -10,14 +10,14 @@ ui <- page_fluid(
       label = "",
       choices = c(
         "Nouns" = "nouns",
-        "Infinitive verbs" = "verbs",
+        "Imperative verbs (informal)" = "imperative_verbs_informal",
         "Numbers" = "numbers",
         "Prepositions" = "prepositions",
         "Interrogatives & demonstratives" = "interrogatives_demonstratives"
       ),
       selected = c(
         "Nouns" = "nouns",
-        "Infinitive verbs" = "verbs",
+        "Imperative verbs (informal)" = "imperative_verbs_informal",
         "Numbers" = "numbers",
         "Prepositions" = "prepositions",
         "Interrogatives & demonstratives" = "interrogatives_demonstratives"
@@ -55,7 +55,7 @@ ui <- page_fluid(
 server <- function(input, output) {
   set.seed(as.numeric(Sys.time()))
   
-  source("R/verbs.R")
+  source("R/imperative_verbs_informal.R")
   source("R/nouns.R")
   
   rv <- reactiveValues(question = "",

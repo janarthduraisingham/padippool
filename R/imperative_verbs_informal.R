@@ -1,4 +1,7 @@
-verbs <- list(
+library(tidyverse)
+library(purrr)
+
+imperative_verbs_informal <- list(
   c("come; welcome", "வா"),
   c("give (me)", "தா"),
   c("go", "போ"),
@@ -41,4 +44,6 @@ verbs <- list(
   c("wet", "நனை"),
   c("hide", "மறை"),
   c("kill", "கொல்")
-)
+) %>%
+  map(~ paste0(.x[1], " (informal)"))
+
