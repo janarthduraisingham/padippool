@@ -8,6 +8,11 @@ options(shiny.error = browser)
 ui <- page_fluid(
   titlePanel("Welcome to படிப்pool"),
   card(
+    card_header("Acknowledgement"),
+    "The contents of this web application is heavily inspired by the following freely available book:", br(),
+    span("Kottalam, Jeyapandian.", em("Learning Tamil by Yourself: Classical to Contemporary; Literary to Colloquial."), "Independently published, 2018")
+  ),
+  card(
     card_header("What will you dive into today?"),
     checkboxGroupInput(
       inputId = "question_types",
