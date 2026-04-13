@@ -19,20 +19,20 @@ ui <- page_fluid(
       label = "",
       choices = c(
         "Nouns" = "nouns",
-        "Imperative verbs (informal)" = "imperative_verbs_informal",
         "Numbers" = "numbers",
         "Prepositions" = "prepositions",
         "Interrogatives & demonstratives" = "interrogatives_demonstratives",
+        "Imperative verbs (informal)" = "imperative_verbs_informal",
         "Present tense verbs" = "present_tense_verbs",
         "Past tense verbs" = "past_tense_verbs",
         "Future tense verbs" = "future_tense_verbs"
       ),
       selected = c(
         "Nouns" = "nouns",
-        "Imperative verbs (informal)" = "imperative_verbs_informal",
         "Numbers" = "numbers",
         "Prepositions" = "prepositions",
         "Interrogatives & demonstratives" = "interrogatives_demonstratives",
+        "Imperative verbs (informal)" = "imperative_verbs_informal",
         "Present tense verbs" = "present_tense_verbs",
         "Past tense verbs" = "past_tense_verbs",
         "Future tense verbs" = "future_tense_verbs"
