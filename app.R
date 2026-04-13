@@ -22,14 +22,16 @@ ui <- page_fluid(
         "Imperative verbs (informal)" = "imperative_verbs_informal",
         "Numbers" = "numbers",
         "Prepositions" = "prepositions",
-        "Interrogatives & demonstratives" = "interrogatives_demonstratives"
+        "Interrogatives & demonstratives" = "interrogatives_demonstratives",
+        "Present tense verbs" = "present_tense_verbs"
       ),
       selected = c(
         "Nouns" = "nouns",
         "Imperative verbs (informal)" = "imperative_verbs_informal",
         "Numbers" = "numbers",
         "Prepositions" = "prepositions",
-        "Interrogatives & demonstratives" = "interrogatives_demonstratives"
+        "Interrogatives & demonstratives" = "interrogatives_demonstratives",
+        "Present tense verbs" = "present_tense_verbs"
       )
     )
   ),
@@ -64,8 +66,8 @@ ui <- page_fluid(
 server <- function(input, output) {
   set.seed(as.numeric(Sys.time()))
   
-  source("R/imperative_verbs_informal.R")
-  source("R/nouns.R")
+  #source("R/imperative_verbs_informal.R")
+  #source("R/nouns.R")
   
   rv <- reactiveValues(question = "",
                        solution = "",
