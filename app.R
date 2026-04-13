@@ -23,7 +23,9 @@ ui <- page_fluid(
         "Numbers" = "numbers",
         "Prepositions" = "prepositions",
         "Interrogatives & demonstratives" = "interrogatives_demonstratives",
-        "Present tense verbs" = "present_tense_verbs"
+        "Present tense verbs" = "present_tense_verbs",
+        "Past tense verbs" = "past_tense_verbs",
+        "Future tense verbs" = "future_tense_verbs"
       ),
       selected = c(
         "Nouns" = "nouns",
@@ -31,7 +33,9 @@ ui <- page_fluid(
         "Numbers" = "numbers",
         "Prepositions" = "prepositions",
         "Interrogatives & demonstratives" = "interrogatives_demonstratives",
-        "Present tense verbs" = "present_tense_verbs"
+        "Present tense verbs" = "present_tense_verbs",
+        "Past tense verbs" = "past_tense_verbs",
+        "Future tense verbs" = "future_tense_verbs"
       )
     )
   ),
