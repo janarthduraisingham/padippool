@@ -43,7 +43,14 @@ imperative_verbs_informal <- list(
   c("sit", "உட்கார்"),
   c("wet", "நனை"),
   c("hide", "மறை"),
-  c("kill", "கொல்")
+  c("kill", "கொல்"),
+  c("stab", "குத்து"),
+  c("open", "திற"),
+  c("close", "மூடு"),
+  c("drop", "போடு"),
+  c("chase", "விரட்டு"),
+  c("cut", "வெட்டு"),
+  c("sharpen; paint", "தீட்டு")
 ) %>%
   # append informal to english definition
   map(~ {
