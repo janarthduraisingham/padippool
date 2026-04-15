@@ -5,6 +5,20 @@ library(bslib)
 options(shiny.fullstacktrace = TRUE)
 options(shiny.error = browser)
 
+choices = c(
+  "Nouns" = "nouns",
+  "Numbers" = "numbers",
+  "Prepositions" = "prepositions",
+  "Interrogatives & demonstratives" = "interrogatives_demonstratives",
+  "Imperative verbs (informal)" = "imperative_verbs_informal",
+  "Present tense verbs" = "present_tense_verbs",
+  "Past tense verbs" = "past_tense_verbs",
+  "Future tense verbs" = "future_tense_verbs",
+  "Negative mood verbs" = "negative_mood_verbs",
+  "Adverbs" = "adverbs",
+  "Subject-object-verb sentences (second case differentiator)" = "second_case_differentiator"
+)
+
 ui <- page_fluid(
   titlePanel("Welcome to படிப்pool"),
   card(
@@ -14,35 +28,14 @@ ui <- page_fluid(
   ),
   card(
     card_header("What will you dive into today?"),
+    
+    
+    
     checkboxGroupInput(
       inputId = "question_types",
       label = "",
-      choices = c(
-        "Nouns" = "nouns",
-        "Numbers" = "numbers",
-        "Prepositions" = "prepositions",
-        "Interrogatives & demonstratives" = "interrogatives_demonstratives",
-        "Imperative verbs (informal)" = "imperative_verbs_informal",
-        "Present tense verbs" = "present_tense_verbs",
-        "Past tense verbs" = "past_tense_verbs",
-        "Future tense verbs" = "future_tense_verbs",
-        "Negative mood verbs" = "negative_mood_verbs",
-        "Adverbs" = "adverbs",
-        "Subject-object-verb sentences (second case differentiator)" = "second_case_differentiator"
-      ),
-      selected = c(
-        "Nouns" = "nouns",
-        "Numbers" = "numbers",
-        "Prepositions" = "prepositions",
-        "Interrogatives & demonstratives" = "interrogatives_demonstratives",
-        "Imperative verbs (informal)" = "imperative_verbs_informal",
-        "Present tense verbs" = "present_tense_verbs",
-        "Past tense verbs" = "past_tense_verbs",
-        "Future tense verbs" = "future_tense_verbs",
-        "Negative mood verbs" = "negative_mood_verbs",
-        "Adverbs" = "adverbs",
-        "Subject-object-verb sentences (second case differentiator)" = "second_case_differentiator"
-      )
+      choices = choices,
+      selected = choices
     )
   ),
   
