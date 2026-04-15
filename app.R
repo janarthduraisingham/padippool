@@ -26,7 +26,8 @@ ui <- page_fluid(
         "Present tense verbs" = "present_tense_verbs",
         "Past tense verbs" = "past_tense_verbs",
         "Future tense verbs" = "future_tense_verbs",
-        "Negative mood verbs" = "negative_mood_verbs"
+        "Negative mood verbs" = "negative_mood_verbs",
+        "Adverbs" = "adverbs"
       ),
       selected = c(
         "Nouns" = "nouns",
@@ -37,7 +38,8 @@ ui <- page_fluid(
         "Present tense verbs" = "present_tense_verbs",
         "Past tense verbs" = "past_tense_verbs",
         "Future tense verbs" = "future_tense_verbs",
-        "Negative mood verbs" = "negative_mood_verbs"
+        "Negative mood verbs" = "negative_mood_verbs",
+        "Adverbs" = "adverbs"
       )
     )
   ),
