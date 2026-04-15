@@ -27,7 +27,8 @@ ui <- page_fluid(
         "Past tense verbs" = "past_tense_verbs",
         "Future tense verbs" = "future_tense_verbs",
         "Negative mood verbs" = "negative_mood_verbs",
-        "Adverbs" = "adverbs"
+        "Adverbs" = "adverbs",
+        "Subject-object-verb sentences (second case differentiator)" = "second_case_differentiator"
       ),
       selected = c(
         "Nouns" = "nouns",
@@ -39,7 +40,8 @@ ui <- page_fluid(
         "Past tense verbs" = "past_tense_verbs",
         "Future tense verbs" = "future_tense_verbs",
         "Negative mood verbs" = "negative_mood_verbs",
-        "Adverbs" = "adverbs"
+        "Adverbs" = "adverbs",
+        "Subject-object-verb sentences (second case differentiator)" = "second_case_differentiator"
       )
     )
   ),
