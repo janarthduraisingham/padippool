@@ -70,5 +70,19 @@ nouns <- list(
   c("that day", "அன்று"),
   c("yesterday", "நேற்று"),
   c("today", "இன்று"),
-  c("tomorrow", "நாளை")
+  c("tomorrow", "நாளை"),
+  c("milk", "பால்"),
+  c("dog", "தாய்"),
+  c("cat", "பூனை"),
+  c("knife", "கத்தி"),
+  c("wagon; bus; train", "வண்டி"),
+  c("capital city", "தவைநகரம்"),
+  c("door", "கதவு"),
+  c("grass", "புல்"),
+  c("eye", "கண்"),
+  c("house; home", "வீடு"),
+  c("spring, coil; bow (for arrows)", "வில்"),
+  c("food", "சாப்பாடு"),
+  c("water", "தண்ணீர்"),
+  c("clock", "கடிகாரம்")
 )
