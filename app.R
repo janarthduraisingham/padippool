@@ -10,6 +10,7 @@ choices = c(
   "Nouns in the Accusative case" = "nouns_accusative",
   "Nouns in the Instrumental case" = "nouns_instrumental",
   "Nouns in the Social case" = "nouns_social",
+  "Nouns in the Dative case" = "nouns_dative",
   "Verbs in the informal Imperative tense" = "imperative_verbs_informal",
   "Verbs in the Present tense" = "present_tense_verbs",
   "Verbs in the Perfect Past tense" = "past_tense_verbs",
