@@ -1,4 +1,4 @@
-nouns <- list(
+nouns_nominative <- list(
   c("hello","வணக்கம்"), 
   c("cow", "மாடு"),
   c("picture; movie", "படம்"),

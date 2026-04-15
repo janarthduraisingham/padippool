@@ -1,3 +1,3 @@
 nouns_social <- list(
-  c("", "")
+  c("He ate fruit with peel", "தோலோடு பழம் சாப்பிட்டான்")
 )
