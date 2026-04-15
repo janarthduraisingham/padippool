@@ -16,7 +16,7 @@ choices = c(
   "Future tense verbs" = "future_tense_verbs",
   "Negative mood verbs" = "negative_mood_verbs",
   "Adverbs" = "adverbs",
-  "Subject-object-verb sentences (second case differentiator)" = "second_case_differentiator"
+  "Nouns in the Accusative case" = "nouns_accusative"
 )
 
 ui <- page_fluid(
