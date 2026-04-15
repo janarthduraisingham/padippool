@@ -7,16 +7,16 @@ options(shiny.error = browser)
 
 choices = c(
   "Nouns in the Nominative case" = "nouns_nominative",
-  "Numbers" = "numbers",
-  "Prepositions" = "prepositions",
-  "Interrogatives & demonstratives" = "interrogatives_demonstratives",
+  "Nouns in the Accusative case" = "nouns_accusative",
   "Imperative verbs (informal)" = "imperative_verbs_informal",
   "Present tense verbs" = "present_tense_verbs",
   "Past tense verbs" = "past_tense_verbs",
   "Future tense verbs" = "future_tense_verbs",
   "Negative mood verbs" = "negative_mood_verbs",
-  "Adverbs" = "adverbs",
-  "Nouns in the Accusative case" = "nouns_accusative"
+  "Numbers" = "numbers",
+  "Prepositions" = "prepositions",
+  "Interrogatives & demonstratives" = "interrogatives_demonstratives",
+  "Adverbs" = "adverbs"
 )
 
 ui <- page_fluid(
