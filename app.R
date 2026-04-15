@@ -6,7 +6,7 @@ options(shiny.fullstacktrace = TRUE)
 options(shiny.error = browser)
 
 choices = c(
-  "Nouns" = "nouns",
+  "Nouns in the Nominative case" = "nouns_nominative",
   "Numbers" = "numbers",
   "Prepositions" = "prepositions",
   "Interrogatives & demonstratives" = "interrogatives_demonstratives",
@@ -68,9 +68,6 @@ ui <- page_fluid(
 
 server <- function(input, output) {
   set.seed(as.numeric(Sys.time()))
-  
-  #source("R/imperative_verbs_informal.R")
-  #source("R/nouns.R")
   
   rv <- reactiveValues(question = "",
                        solution = "",
