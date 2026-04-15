@@ -5,6 +5,20 @@ library(bslib)
 options(shiny.fullstacktrace = TRUE)
 options(shiny.error = browser)
 
+choices = c(
+  "Nouns in the Nominative case" = "nouns_nominative",
+  "Nouns in the Accusative case" = "nouns_accusative",
+  "Verbs in the informal Imperative tense" = "imperative_verbs_informal",
+  "Verbs in the Present tense" = "present_tense_verbs",
+  "Verbs in the Perfect Past tense" = "past_tense_verbs",
+  "Verbs in the Future tense" = "future_tense_verbs",
+  "Verbs in the Negative mood" = "negative_mood_verbs",
+  "Numbers" = "numbers",
+  "Prepositions" = "prepositions",
+  "Interrogatives & demonstratives" = "interrogatives_demonstratives",
+  "Adverbs" = "adverbs"
+)
+
 ui <- page_fluid(
   titlePanel("Welcome to படிப்pool"),
   card(
@@ -14,35 +28,14 @@ ui <- page_fluid(
   ),
   card(
     card_header("What will you dive into today?"),
+    
+    
+    
     checkboxGroupInput(
       inputId = "question_types",
       label = "",
-      choices = c(
-        "Nouns" = "nouns",
-        "Numbers" = "numbers",
-        "Prepositions" = "prepositions",
-        "Interrogatives & demonstratives" = "interrogatives_demonstratives",
-        "Imperative verbs (informal)" = "imperative_verbs_informal",
-        "Present tense verbs" = "present_tense_verbs",
-        "Past tense verbs" = "past_tense_verbs",
-        "Future tense verbs" = "future_tense_verbs",
-        "Negative mood verbs" = "negative_mood_verbs",
-        "Adverbs" = "adverbs",
-        "Subject-object-verb sentences (second case differentiator)" = "second_case_differentiator"
-      ),
-      selected = c(
-        "Nouns" = "nouns",
-        "Numbers" = "numbers",
-        "Prepositions" = "prepositions",
-        "Interrogatives & demonstratives" = "interrogatives_demonstratives",
-        "Imperative verbs (informal)" = "imperative_verbs_informal",
-        "Present tense verbs" = "present_tense_verbs",
-        "Past tense verbs" = "past_tense_verbs",
-        "Future tense verbs" = "future_tense_verbs",
-        "Negative mood verbs" = "negative_mood_verbs",
-        "Adverbs" = "adverbs",
-        "Subject-object-verb sentences (second case differentiator)" = "second_case_differentiator"
-      )
+      choices = choices,
+      selected = choices
     )
   ),
   
@@ -75,9 +68,6 @@ ui <- page_fluid(
 
 server <- function(input, output) {
   set.seed(as.numeric(Sys.time()))
-  
-  #source("R/imperative_verbs_informal.R")
-  #source("R/nouns.R")
   
   rv <- reactiveValues(question = "",
                        solution = "",
