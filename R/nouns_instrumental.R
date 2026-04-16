@@ -1,3 +1,4 @@
 nouns_instrumental <- list(
-  c("he cut with knife", "கத்தியால் வெட்டினான்")
+  c("He cut with knife", "கத்தியால் வெட்டினான்"),
+  c("He wrote with hand", "கையால் எழுதினான்")
 )
