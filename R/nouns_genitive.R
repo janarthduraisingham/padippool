@@ -1,3 +1,3 @@
 nouns_genitive <- list(
-  c("", "")
+  c("Rama's hand", "ராமனின் கை")
 )
