@@ -50,7 +50,27 @@ imperative_verbs_informal <- list(
   c("drop", "போடு"),
   c("chase", "விரட்டு"),
   c("cut", "வெட்டு"),
-  c("sharpen; paint", "தீட்டு")
+  c("sharpen; paint", "தீட்டு"),
+  c("cook (verb)", "சமை"),
+  c("ripen", "பழு"),
+  c("roast (verb)", "வறு"),
+  c("pluck", "பறி"),
+  c("lullaby", "தாலாட்டு"),
+  c("put to bed", "தூங்கவை"),
+  c("chew", "மெல்"),
+  c("swallow", "விழுங்கு"),
+  c("spill (verb)", "சிந்து"),
+  c("prove", "நிரூபி"),
+  c("believe", "நம்பு"),
+  c("spoil (verb)", "கெடு"),
+  c("send", "அனுப்பு"),
+  c("be recevied; be available", "கிடை"),
+  c("shower; pour", "பெய்"),
+  c("request; want", "வேண்டு"),
+  c("finish (verb)", "முடி"),
+  c("bring", "கொண்டுவா"),
+  c("steal", "திருடு"),
+  c("be suitable", "தகு")
 ) %>%
   # append informal to english definition
   map(~ {

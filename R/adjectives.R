@@ -1,0 +1,7 @@
+adjectives <- list(
+  c("previous", "முந்திய"),
+  c("next", "அடுத்த"),
+  c("flat", "தட்டை"),
+  c("round; spherical", "உருண்டை"),
+  c("suitable", "தகுந்த")
+)
