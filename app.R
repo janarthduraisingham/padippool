@@ -23,7 +23,8 @@ choices = c(
   "Prepositions" = "prepositions",
   "Pronouns" = "pronouns",
   "Interrogatives & demonstratives" = "interrogatives_demonstratives",
-  "Adverbs" = "adverbs"
+  "Adverbs" = "adverbs",
+  "Adjectives" = "adjectives"
 )
 
 ui <- page_fluid(
