@@ -21,6 +21,7 @@ choices = c(
   "Verbs in the Negative mood" = "negative_mood_verbs",
   "Numbers" = "numbers",
   "Prepositions" = "prepositions",
+  "Pronouns" = "pronouns",
   "Interrogatives & demonstratives" = "interrogatives_demonstratives",
   "Adverbs" = "adverbs"
 )
