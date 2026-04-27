@@ -30,8 +30,8 @@ choices = c(
 ui <- page_fluid(
   titlePanel("Welcome to படிப்pool"),
   card(
-    card_header("Acknowledgement"),
-    "The contents of this web application is heavily inspired by the following freely available book:", br(),
+    card_header("Acknowledgements"),
+    "The contents, vocabulary, grammar structures, and examples featured in this web application are taken directly from the following freely available book:", br(),
     span("Kottalam, Jeyapandian.", em("Learning Tamil by Yourself: Classical to Contemporary; Literary to Colloquial."), "Independently published, 2018")
   ),
   card(
