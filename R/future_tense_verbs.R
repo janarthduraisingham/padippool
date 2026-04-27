@@ -1,4 +1,5 @@
-future_tense_verbs <- list(
+future_tense_verbs <- function() {
+  list(
   c("I will buy", "வாங்குவேன்"),
   c("You (informal) will buy", "வாங்குவாய்"),
   c("He will buy", "வாங்குவான்"),
@@ -104,3 +105,4 @@ future_tense_verbs <- list(
     .x[1] = paste0("[Verbs in the Future tense] ", .x[1]) # prepend question type
     .x
   })
+}

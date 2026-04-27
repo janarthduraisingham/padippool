@@ -1,4 +1,5 @@
-negative_mood_verbs <- list(
+negative_mood_verbs <- function() {
+  list(
   c("I not do", "செய்யேன்"),
   c("You (informal) not do", "செய்யாய்"),
   c("He not do", "செய்யான்"),
@@ -64,3 +65,4 @@ negative_mood_verbs <- list(
     .x[1] = paste0("[Verbs in the Negative mood] ", .x[1]) # prepend question type
     .x
   })
+}

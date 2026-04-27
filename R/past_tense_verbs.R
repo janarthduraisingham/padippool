@@ -1,4 +1,5 @@
-past_tense_verbs <- list(
+past_tense_verbs <- function() {
+  list(
   c("I bought", "வாங்கினேன்"),
   c("You (informal) bought", "வாங்கினாய்"),
   c("He bought", "வாங்கினான்"),
@@ -104,3 +105,4 @@ past_tense_verbs <- list(
     .x[1] = paste0("[Verbs in the Perfect Past tense] ", .x[1]) # prepend question type
     .x
   })
+}

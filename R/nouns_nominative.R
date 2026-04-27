@@ -1,4 +1,5 @@
-nouns_nominative <- list(
+nouns_nominative <- function() {
+  list(
   c("hello","வணக்கம்"), 
   c("cow", "மாடு"),
   c("picture; movie", "படம்"),
@@ -117,3 +118,4 @@ nouns_nominative <- list(
     .x[1] = paste0("[Nouns in the Nominative case] ", .x[1]) # prepend question type
     .x
   })
+}
