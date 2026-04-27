@@ -1,4 +1,5 @@
-present_tense_verbs <- list(
+present_tense_verbs <- function() {
+  list(
   c("I am buying", "வாங்குகிறேன்"),
   c("You (informal) are buying", "வாங்குகிறாய்"),
   c("He (informal) is buying", "வாங்குகிறான்"),
@@ -104,3 +105,4 @@ present_tense_verbs <- list(
     .x[1] = paste0("[Verbs in the Present tense] ", .x[1]) # prepend question type
     .x
   })
+}

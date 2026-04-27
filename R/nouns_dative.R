@@ -1,4 +1,5 @@
-nouns_dative <- list(
+nouns_dative <- function() {
+  list(
   c("He went home", "வீட்டுக்குப் போனான்"),
   c("Cow has four legs ", "மாட்டுக்கு நான்கு கால்கள்"),
   c("He went to Chennai", "ஞென்னைக்குப் போனான்"),
@@ -9,3 +10,4 @@ nouns_dative <- list(
     .x[1] = paste0("[Nouns in the Dative case] ", .x[1]) # prepend question type
     .x
   })
+}

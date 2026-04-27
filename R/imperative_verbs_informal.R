@@ -1,4 +1,5 @@
-imperative_verbs_informal <- list(
+imperative_verbs_informal <- function() {
+  list(
   c("come; welcome", "வா"),
   c("give (me)", "தா"),
   c("go", "போ"),
@@ -73,3 +74,4 @@ imperative_verbs_informal <- list(
     .x[1] = paste0("[Verbs in the informal imperative mood] ", .x[1]) # prepend question type
     .x
   })
+}

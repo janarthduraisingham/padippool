@@ -1,4 +1,5 @@
-numbers <- list(
+numbers <- function() {
+  list(
   c("one", "ஒன்று"),
   c("two", "இரண்டு"),
   c("three", "மூன்று"),
@@ -16,3 +17,4 @@ numbers <- list(
     .x[1] = paste0("[Numbers] ", .x[1]) # prepend question type
     .x
   })
+}

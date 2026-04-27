@@ -1,4 +1,5 @@
-pronouns <- list(
+pronouns <- function() {
+  list(
   c("I", "நான்"),
   c("we (including addressee)", "நாம்"),
   c("we (excluding addressee)", "நாங்கள்"),
@@ -35,3 +36,4 @@ pronouns <- list(
     .x[1] = paste0("[Pronouns] ", .x[1]) # prepend question type
     .x
   })
+}

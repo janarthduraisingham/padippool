@@ -1,4 +1,5 @@
-interrogatives_demonstratives <- list(
+interrogatives_demonstratives <- function() {
+  list(
   c("what", "என்ன"),
   c("who (male)", "எவன்"),
   c("who (female)", "எவள்"),
@@ -27,3 +28,4 @@ interrogatives_demonstratives <- list(
     .x[1] = paste0("[Interrogatives & Demonstratives] ", .x[1]) # prepend question type
     .x
   })
+}

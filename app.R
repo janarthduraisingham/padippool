@@ -1,7 +1,3 @@
-#library(shiny)
-#library(bslib)
-#library(tidyverse)
-
 # Options
 options(shiny.fullstacktrace = TRUE)
 options(shiny.error = browser)

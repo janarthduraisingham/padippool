@@ -1,4 +1,5 @@
-prepositions <- list(
+prepositions <- function() {
+  list(
   c("inside", "உள்ளே"),
   c("outside", "வெளியே"),
   c("above; up", "மேலே"),
@@ -8,3 +9,4 @@ prepositions <- list(
     .x[1] = paste0("[Prepositions] ", .x[1]) # prepend question type
     .x
   })
+}
