@@ -1,4 +1,5 @@
-adjectives <- list(
+adjectives <- function() {
+  list(
   c("previous", "முந்திய"),
   c("next", "அடுத்த"),
   c("flat", "தட்டை"),
@@ -9,3 +10,5 @@ adjectives <- list(
     .x[1] = paste0("[Adjectives] ", .x[1]) # prepend question type
     .x
   })
+  
+}
