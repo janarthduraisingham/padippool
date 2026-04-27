@@ -4,4 +4,8 @@ nouns_social <- list(
   c("She painted eye with mascara", "மையால் கண்ணை தீட்டினாள்"),
   c("With food, he gave coffee", "சாப்பாட்டோடு காப்பி தந்தார்"),
   c("She ate idly with chutney", "இட்டிலியைச் சட்டினியோடு சாப்பிட்டாள்")
-)
+) %>%
+  map(~ {
+    .x[1] = paste0("[Nouns in the Social case] ", .x[1]) # prepend question type
+    .x
+  })
