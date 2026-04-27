@@ -1,6 +1,3 @@
-library(tidyverse)
-library(purrr)
-
 imperative_verbs_informal <- list(
   c("come; welcome", "வா"),
   c("give (me)", "தா"),
