@@ -59,4 +59,8 @@ negative_mood_verbs <- list(
   c("You (plural) not eat", "சாப்பிடீர்கள்"),
   c("They (people) not eat", "சாப்பிடனர்"),
   c("They (objects) not eat", "சாப்பிடன")
-)
+) %>%
+  map(~ {
+    .x[1] = paste0("[Verbs in the Negative mood] ", .x[1]) # prepend question type
+    .x
+  })
