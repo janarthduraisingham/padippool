@@ -112,4 +112,8 @@ nouns_nominative <- list(
   c("chief; leader", "தலைவர்"),
   c("job; task", "வேலை"),
   c("wedding", "கல்யாணம்")
-)
+) %>%
+  map(~ {
+    .x[1] = paste0("[Nouns in the Nominative case] ", .x[1]) # prepend question type
+    .x
+  })
