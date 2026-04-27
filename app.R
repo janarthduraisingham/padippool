@@ -1,5 +1,6 @@
 library(shiny)
 library(bslib)
+library(tidyverse)
 
 # Options
 options(shiny.fullstacktrace = TRUE)
