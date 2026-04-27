@@ -22,4 +22,8 @@ interrogatives_demonstratives <- list(
   c("for what", "எதற்கு"),
   c("for that", "அதற்கு"),
   c("which day", "என்று")
-)
+) %>%
+  map(~ {
+    .x[1] = paste0("[Interrogatives & Demonstratives] ", .x[1]) # prepend question type
+    .x
+  })
