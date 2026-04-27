@@ -99,4 +99,8 @@ future_tense_verbs <- list(
   c("You (plural) will do", "செய்வவீர்கள்"),
   c("They (people) will do", "செய்வனர்"),
   c("They (objects) will do", "செய்வன")
-)
+) %>%
+  map(~ {
+    .x[1] = paste0("[Verbs in the Future tense] ", .x[1]) # prepend question type
+    .x
+  })

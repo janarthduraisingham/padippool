@@ -99,4 +99,8 @@ present_tense_verbs <- list(
   c("You (plural) are doing", "செய்கிறீர்கள்"),
   c("They (people) are doing", "செய்கிறனர்"),
   c("They (objects) are doing", "செய்கிறன")
-)
+) %>%
+  map(~ {
+    .x[1] = paste0("[Verbs in the Present tense] ", .x[1]) # prepend question type
+    .x
+  })

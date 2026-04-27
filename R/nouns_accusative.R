@@ -4,4 +4,8 @@ nouns_accusative <- list(
   c("he (informal) pushed wagon", "அவன் வண்டியைத் தள்ளினான்"),
   c("tree hides elephant", "மரம் யானையை மறைக்கிறது"),
   c("Kumaran opened door", "குமரன் கதவைத் திறந்தான்")
-)
+) %>%
+  map(~ {
+    .x[1] = paste0("[Nouns in the Accusative case] ", .x[1]) # prepend question type
+    .x
+  })

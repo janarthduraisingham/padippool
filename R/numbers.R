@@ -11,4 +11,8 @@ numbers <- list(
   c("ten", "பத்து"),
   c("one hundred", "நூறு"),
   c("one thousand", "ஆயிரம்")
-)
+) %>%
+  map(~ {
+    .x[1] = paste0("[Numbers] ", .x[1]) # prepend question type
+    .x
+  })

@@ -99,4 +99,8 @@ past_tense_verbs <- list(
   c("You (plural) did", "செய்தீராகள்"),
   c("They (people) did", "செய்தனர்"),
   c("They (objects) did", "செய்தன")
-)
+) %>%
+  map(~ {
+    .x[1] = paste0("[Verbs in the Perfect Past tense] ", .x[1]) # prepend question type
+    .x
+  })
