@@ -72,8 +72,7 @@ imperative_verbs_informal <- list(
   c("steal", "திருடு"),
   c("be suitable", "தகு")
 ) %>%
-  # append informal to english definition
   map(~ {
-    .x[1] = paste0(.x[1], " (informal)")
+    .x[1] = paste0("[Verbs in the informal imperative mood] ", .x[1]) # prepend question type
     .x
   })
