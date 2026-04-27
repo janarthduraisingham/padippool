@@ -30,4 +30,8 @@ pronouns <- list(
   c("where is my pen?", "என் பேனா எங்கே இருக்கிறது"),
   c("is your (informal) book with him?", "உன் புத்தகம் அவனிடமா இருக்கிறது"),
   c("its legs", "அவற்றின் கால்கள்")
-)
+) %>%
+  map(~ {
+    .x[1] = paste0("[Pronouns] ", .x[1]) # prepend question type
+    .x
+  })
