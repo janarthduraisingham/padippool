@@ -28,6 +28,7 @@ imperative_verbs_informal <- imperative_verbs_informal()
 future_tense_verbs <- future_tense_verbs()
 infinitives <- infinitives()
 contemporary_negatives <- contemporary_negatives()
+modal_verbs <- modal_verbs()
 
 choices = c(
   "Nouns in the Nominative case" = "nouns_nominative",
@@ -50,7 +51,8 @@ choices = c(
   "Adverbs" = "adverbs",
   "Adjectives" = "adjectives",
   "Infinitives" = "infinitives",
-  "Contemporary Negatives" = "contemporary_negatives"
+  "Contemporary Negatives" = "contemporary_negatives",
+  "Modal verbs" = "modal_verbs"
 )
 
 ui <- page_fluid(
