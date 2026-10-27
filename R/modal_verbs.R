@@ -14,7 +14,22 @@ modal_verbs <- function() {
   c("Let him (informal) go to school", "அவன் பள்ளிக்கூடம் போகட்டும்"),
   c("Let it rain", "மழை பெய்யட்டும்"),
   c("Let the vehicle stop; we can board", "வாகணம் நிற்கட்டும் ஏறலாம்"),
-  c("Let it happen; we can see", "ஆகட்டும் பார்க்கலாம்")
+  c("Let it happen; we can see", "ஆகட்டும் பார்க்கலாம்"),
+  c("He (informal) can do it", "அவனால் அதைச் செய்ய இயலும்"),
+  c("He (informal) cannot do it", "அவனால் அதைச் செய்ய இயலாது"),
+  c("I cannot walk", "என்னால் நடக்க இயலாது"),
+  c("He (informal) can do it (contemporary)", "அவனால் அதைச் செய்ய முடியும்"),
+  c("He (informal) cannot do it (contemporary)", "அவனால் அதைச் செய்ய முடியாது"),
+  c("One must not do it", "அதைச் செய்யக் கூடாது"),
+  c("One must not go there", "அங்கு போகக் கூடாது"),
+  c("Do not go there", "அங்கு போகாதே"),
+  c("Need not", "வேண்டாம்"),
+  c("Tell him (informal) to eat", "அவனைச் சாப்பிடச் சொல்லுங்கோ"),
+  c("He called to come (invited) to the house", "வீட்டுக்கு வர அழைத்தார்"),
+  c("Today they won't play", "இன்று விளையாடமாட்டார்கள்"),
+  c("Can I go there?", "ரான் அங்கு போகலாமா"),
+  c("Today rain didn't fall", "இன்று மழை பெய்யவில்லை"),
+  c("One can't bite the candy", "மிட்டாயைக் கடிக்க இயலாது")
 ) %>%
   map(~ {
     .x[1] = paste0("[Adjectives] ", .x[1]) # prepend question type
