@@ -27,6 +27,7 @@ interrogatives_demonstratives <- interrogatives_demonstratives()
 imperative_verbs_informal <- imperative_verbs_informal()
 future_tense_verbs <- future_tense_verbs()
 infinitives <- infinitives()
+contemporary_negatives <- contemporary_negatives()
 
 choices = c(
   "Nouns in the Nominative case" = "nouns_nominative",
@@ -48,7 +49,8 @@ choices = c(
   "Interrogatives & demonstratives" = "interrogatives_demonstratives",
   "Adverbs" = "adverbs",
   "Adjectives" = "adjectives",
-  "Infinitives" = "infinitives"
+  "Infinitives" = "infinitives",
+  "Contemporary Negatives" = "contemporary_negatives"
 )
 
 ui <- page_fluid(
